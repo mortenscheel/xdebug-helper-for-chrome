@@ -44,7 +44,7 @@ var xdebug = (function() {
 		messageListener : function(request, sender, sendResponse)
 		{
 			var newStatus,
-				idekey = "XDEBUG_ECLIPSE",
+				idekey = "PHPSTORM",
 				traceTrigger = idekey,
 				profileTrigger = idekey;
 

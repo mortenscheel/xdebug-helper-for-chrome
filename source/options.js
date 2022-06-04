@@ -18,7 +18,7 @@
 
 		if (!idekey)
 		{
-			idekey = "XDEBUG_ECLIPSE";
+			idekey = "PHPSTORM";
 		}
 
 		if (idekey == "XDEBUG_ECLIPSE" || idekey == "netbeans-xdebug" || idekey == "macgdbp" || idekey == "PHPSTORM")

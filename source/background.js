@@ -8,7 +8,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab)
 	}
 
 	// Prep some variables
-	var ideKey = "XDEBUG_ECLIPSE",
+	var ideKey = "PHPSTORM",
 		match = true,
 		traceTrigger = ideKey,
 		profileTrigger = ideKey,
@@ -59,7 +59,7 @@ chrome.commands.onCommand.addListener(function(command)
 {
 	if ('toggle_debug_action' == command)
 	{
-		var ideKey = "XDEBUG_ECLIPSE";
+		var ideKey = "PHPSTORM";
 		var traceTrigger = ideKey;
 		var profileTrigger = ideKey;
 
@@ -127,7 +127,7 @@ chrome.commands.onCommand.addListener(function(command)
 
 // Will not be called, if popup is disabled, so not needed to wrap this in a if statement
 chrome.browserAction.onClicked.addListener((tab) => {
-    var ideKey = "XDEBUG_ECLIPSE";
+    var ideKey = "PHPSTORM";
     var traceTrigger = ideKey;
     var profileTrigger = ideKey;
 

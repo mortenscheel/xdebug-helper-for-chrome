@@ -1,5 +1,5 @@
 $(function() {
-	var ideKey = "XDEBUG_ECLIPSE";
+	var ideKey = "PHPSTORM";
 	var traceTrigger = ideKey;
 	var profileTrigger = ideKey;
 
