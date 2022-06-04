@@ -4,7 +4,17 @@ var xdebug = (function() {
 	{
 		var exp = new Date();
 		exp.setTime(exp.getTime() + (days * 24 * 60 * 60 * 1000));
-		document.cookie = name + "=" + value + "; expires=" + exp.toGMTString() + "; path=/";
+		var debugCookie = name + "=" + value + "; expires=" + exp.toGMTString() + "; path=/";
+		var hostParts = document.location.hostname.split('.');
+		if (hostParts.length > 2) {
+			// remove subdomain
+			hostParts.splice(0, 1);
+		}
+		if (hostParts.length > 1) {
+			// only set domain if not localhost
+			debugCookie += "; domain=." + hostParts.join('.');
+		}
+		document.cookie = debugCookie;
 	}
 
 	// Get the content in a cookie
